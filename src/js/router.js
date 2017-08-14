@@ -2,12 +2,15 @@
 //没有所谓的全局变量，使用什么东西都需要单独导入
 import VueRouter from 'vue-router';
 
-import temCom from '../component/template.vue';
+import Cindex from '../component/index/index.vue';
+import Cnews from '../component/news/list.vue';
+import Cdetail from '../component/news/detail.vue';
 
 export default new VueRouter({
     routes:[
         {path:'/',redirect:'/index'},
-        {path:'/index',component:temCom}
-        // {path:'/news',component:{template:'<p>新闻页面</p>'}}
+        {path:'/index',component:Cindex},
+        {path:'/news/list',component:Cnews},
+        {path:'/news/details/:id',component:Cdetail}
     ]
 })
